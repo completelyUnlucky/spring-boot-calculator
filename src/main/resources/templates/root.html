@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="background-image">
+    <form class="container" action="#" th:action="@{/}" th:object="${appModel}" method="post">
+        <label>
+            <input class="inputs" type="number" th:field="*{firstNum}" placeholder="First number">
+        </label>
+        <br>
+        <label>
+            <input class="inputs" type="number" th:field="*{secondNum}" placeholder="Second number">
+        </label>
+        <br>
+        <br>
+        <input class="button" type="submit" name="plus" value="+">
+        <input class="button" type="submit" name="subtraction" value="-">
+        <input class="button" type="submit" name="multiply" value="*">
+        <input class="button" type="submit" name="divide" value="/">
+        <br>
+        <h2><p th:text="${result}">0</p></h2>
+    </form>
+</div>
+</body>
+</html>
